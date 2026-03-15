@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solar Savings Calculator Australia 2026 | SunReady Solar</title>
+  <meta name="description" content="Calculate how much you could save by going solar. Enter your electricity bill and location for a personalised savings estimate, payback period and 25-year projection." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S1FMEYNDZP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S1FMEYNDZP');
+  </script>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1212625634188099');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1212625634188099&ev=PageView&noscript=1" /></noscript>
+
+  <style>
+    :root {
+      --orange:     #F97316;
+      --orange-deep:#EA580C;
+      --orange-pale:#FFF7ED;
+      --orange-mid: #FED7AA;
+      --yellow:     #FCD34D;
+      --yellow-pale:#FFFBEB;
+      --white:      #FFFFFF;
+      --ink:        #1C0A00;
+      --ink-mid:    #7C3504;
+      --muted:      #92400E;
+      --muted-lt:   #C2724F;
+      --border:     rgba(249,115,22,0.15);
+      --radius:     20px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--orange-pale); color: var(--ink); overflow-x: hidden; }
+    body::before {
+      content: ''; position: fixed; top: -40vh; left: 50%; transform: translateX(-50%);
+      width: 180vw; height: 180vw;
+      background: conic-gradient(from 0deg, rgba(252,211,77,0.06) 0deg, rgba(249,115,22,0.04) 10deg, rgba(252,211,77,0.06) 20deg, rgba(249,115,22,0.03) 30deg, rgba(252,211,77,0.06) 40deg, rgba(249,115,22,0.04) 50deg, rgba(252,211,77,0.06) 60deg, rgba(249,115,22,0.03) 70deg, rgba(252,211,77,0.06) 80deg, rgba(249,115,22,0.04) 90deg, rgba(252,211,77,0.06) 100deg, rgba(249,115,22,0.03) 110deg, rgba(252,211,77,0.06) 120deg, rgba(249,115,22,0.04) 130deg, rgba(252,211,77,0.06) 140deg, rgba(249,115,22,0.03) 150deg, rgba(252,211,77,0.06) 160deg, rgba(249,115,22,0.04) 170deg, rgba(252,211,77,0.06) 180deg, rgba(249,115,22,0.03) 190deg, rgba(252,211,77,0.06) 200deg, rgba(249,115,22,0.04) 210deg, rgba(252,211,77,0.06) 220deg, rgba(249,115,22,0.03) 230deg, rgba(252,211,77,0.06) 240deg, rgba(249,115,22,0.04) 250deg, rgba(252,211,77,0.06) 260deg, rgba(249,115,22,0.03) 270deg, rgba(252,211,77,0.06) 280deg, rgba(249,115,22,0.04) 290deg, rgba(252,211,77,0.06) 300deg, rgba(249,115,22,0.03) 310deg, rgba(252,211,77,0.06) 320deg, rgba(249,115,22,0.04) 330deg, rgba(252,211,77,0.06) 340deg, rgba(249,115,22,0.03) 350deg, rgba(252,211,77,0.06) 360deg);
+      border-radius: 50%; pointer-events: none; z-index: 0;
+    }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 6vw; background: rgba(255,247,237,0.9);
+      backdrop-filter: blur(18px); border-bottom: 1px solid var(--border);
+    }
+    .logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+    .logo-sun {
+      width: 38px; height: 38px; background: linear-gradient(135deg, var(--yellow), var(--orange));
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 0 5px rgba(252,211,77,0.25), 0 0 0 10px rgba(249,115,22,0.08);
+      animation: pulse-sun 3s ease-in-out infinite; flex-shrink: 0;
+    }
+    .logo-sun svg { width: 20px; height: 20px; }
+    @keyframes pulse-sun {
+      0%,100% { box-shadow: 0 0 0 5px rgba(252,211,77,0.25), 0 0 0 10px rgba(249,115,22,0.08); }
+      50%      { box-shadow: 0 0 0 8px rgba(252,211,77,0.3),  0 0 0 16px rgba(249,115,22,0.05); }
+    }
+    .logo-text { font-size: 1.3rem; font-weight: 800; color: var(--ink); letter-spacing: -0.03em; }
+    .logo-text span { color: var(--orange); }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { text-decoration: none; font-size: 0.9rem; font-weight: 600; color: var(--muted); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--orange-deep); }
+    .nav-cta {
+      background: linear-gradient(135deg, var(--orange), var(--orange-deep)) !important;
+      color: white !important; padding: 11px 24px !important; border-radius: 100px;
+      font-weight: 700 !important; font-size: 0.88rem !important;
+      box-shadow: 0 4px 16px rgba(249,115,22,0.35); transition: transform 0.2s, box-shadow 0.2s !important;
+    }
+    .nav-cta:hover { transform: translateY(-1px) !important; box-shadow: 0 8px 24px rgba(249,115,22,0.45) !important; }
+
+    /* Hero */
+    .page-hero {
+      min-height: 46vh; padding: 140px 6vw 64px;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; position: relative; z-index: 1;
+    }
+    .page-hero-content { max-width: 680px; }
+    .eyebrow {
+      font-size: 0.78rem; font-weight: 800; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--orange); margin-bottom: 16px;
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--yellow-pale), var(--orange-pale));
+      border: 1.5px solid rgba(249,115,22,0.2); border-radius: 100px; padding: 7px 18px;
+    }
+    .page-hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem); font-weight: 900; color: var(--ink);
+      letter-spacing: -0.04em; line-height: 1.08; margin-bottom: 18px;
+    }
+    .page-hero h1 .highlight {
+      background: linear-gradient(135deg, var(--orange), var(--yellow));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .page-hero .subtitle {
+      font-size: 1.08rem; color: var(--muted-lt); line-height: 1.75; max-width: 520px; margin: 0 auto;
+    }
+
+    /* Main layout */
+    .calc-section {
+      padding: 0 6vw 100px;
+      position: relative; z-index: 1;
+    }
+    .calc-wrapper {
+      max-width: 860px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 28px; align-items: start;
+    }
+
+    /* Card base */
+    .card {
+      background: white; border-radius: var(--radius);
+      border: 1.5px solid rgba(249,115,22,0.1);
+      box-shadow: 0 4px 24px rgba(249,115,22,0.07);
+      padding: 40px;
+    }
+    .card h2 {
+      font-size: 1.35rem; font-weight: 900; color: var(--ink);
+      letter-spacing: -0.025em; margin-bottom: 24px;
+      padding-bottom: 16px; border-bottom: 2px solid var(--orange-pale);
+    }
+
+    /* Form elements */
+    .form-group { margin-bottom: 22px; }
+    .form-group label {
+      display: block; font-size: 0.88rem; font-weight: 700; color: var(--ink);
+      margin-bottom: 7px;
+    }
+    .form-group label span { color: var(--muted-lt); font-weight: 500; }
+    .form-group select,
+    .form-group input[type="number"] {
+      width: 100%; padding: 13px 16px;
+      border: 1.5px solid var(--orange-mid); border-radius: 12px;
+      font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 600;
+      color: var(--ink); background: var(--orange-pale);
+      outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+      appearance: none; -webkit-appearance: none;
+    }
+    .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23F97316' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 14px center;
+      padding-right: 40px; cursor: pointer;
+    }
+    .form-group select:focus,
+    .form-group input[type="number"]:focus {
+      border-color: var(--orange); box-shadow: 0 0 0 3px rgba(249,115,22,0.12);
+    }
+    .form-group input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
+    .input-prefix {
+      position: relative;
+    }
+    .input-prefix span {
+      position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+      font-weight: 800; color: var(--orange); font-size: 1rem; pointer-events: none;
+    }
+    .input-prefix input { padding-left: 28px; }
+
+    .hint { font-size: 0.78rem; color: var(--muted-lt); margin-top: 5px; }
+
+    /* Slider */
+    .slider-wrap { display: flex; align-items: center; gap: 14px; }
+    input[type="range"] {
+      flex: 1; -webkit-appearance: none; appearance: none;
+      height: 6px; border-radius: 3px;
+      background: linear-gradient(to right, var(--orange) 0%, var(--orange) 50%, var(--orange-mid) 50%, var(--orange-mid) 100%);
+      outline: none; cursor: pointer;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none; width: 22px; height: 22px;
+      border-radius: 50%; background: var(--orange);
+      box-shadow: 0 2px 8px rgba(249,115,22,0.4); cursor: pointer;
+      border: 3px solid white;
+    }
+    .slider-val {
+      font-size: 1rem; font-weight: 800; color: var(--orange);
+      min-width: 44px; text-align: right;
+    }
+
+    .calc-btn {
+      width: 100%; margin-top: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--orange-deep));
+      color: white; font-family: 'Outfit', sans-serif; font-weight: 800;
+      font-size: 1.05rem; padding: 16px 24px; border-radius: 100px;
+      border: none; cursor: pointer;
+      box-shadow: 0 6px 24px rgba(249,115,22,0.38);
+      transition: transform 0.18s, box-shadow 0.18s;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .calc-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(249,115,22,0.48); }
+
+    /* Results panel */
+    .results-card {
+      background: white; border-radius: var(--radius);
+      border: 1.5px solid rgba(249,115,22,0.1);
+      box-shadow: 0 4px 24px rgba(249,115,22,0.07);
+      padding: 40px; position: sticky; top: 90px;
+    }
+    .results-card h2 {
+      font-size: 1.35rem; font-weight: 900; color: var(--ink);
+      letter-spacing: -0.025em; margin-bottom: 24px;
+      padding-bottom: 16px; border-bottom: 2px solid var(--orange-pale);
+    }
+
+    .results-placeholder {
+      text-align: center; padding: 32px 0;
+      color: var(--muted-lt); font-size: 0.95rem; line-height: 1.7;
+    }
+    .results-placeholder .big-icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+
+    .results-body { display: none; }
+    .results-body.visible { display: block; }
+
+    .stat-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 14px 0; border-bottom: 1px solid var(--border);
+    }
+    .stat-row:last-of-type { border-bottom: none; }
+    .stat-label { font-size: 0.9rem; font-weight: 600; color: var(--muted-lt); }
+    .stat-value { font-size: 1.1rem; font-weight: 900; color: var(--ink); }
+    .stat-value.big { font-size: 1.6rem; color: var(--orange); }
+    .stat-value.green { color: #16A34A; }
+
+    .projection-bar-wrap { margin: 20px 0 8px; }
+    .proj-label { font-size: 0.78rem; font-weight: 700; color: var(--muted-lt); margin-bottom: 6px; display: flex; justify-content: space-between; }
+    .proj-bar { height: 10px; border-radius: 5px; background: var(--orange-mid); overflow: hidden; margin-bottom: 10px; }
+    .proj-bar-fill { height: 100%; border-radius: 5px; background: linear-gradient(90deg, var(--orange), var(--yellow)); transition: width 0.6s ease; }
+
+    .disclaimer {
+      font-size: 0.75rem; color: var(--muted-lt); line-height: 1.6;
+      margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);
+    }
+
+    .results-cta {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: linear-gradient(135deg, var(--orange), var(--orange-deep));
+      color: white; font-weight: 800; font-size: 0.95rem;
+      padding: 15px 24px; border-radius: 100px; text-decoration: none;
+      margin-top: 20px; box-shadow: 0 4px 18px rgba(249,115,22,0.35);
+      transition: transform 0.18s, box-shadow 0.18s; width: 100%; text-align: center;
+    }
+    .results-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 28px rgba(249,115,22,0.45); }
+
+    /* Info + related below */
+    .below-grid {
+      max-width: 860px; margin: 28px auto 0;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 28px;
+    }
+
+    .info-box {
+      background: var(--orange-pale); border-left: 4px solid var(--orange);
+      border-radius: 12px; padding: 22px;
+    }
+    .info-box h4 { font-size: 0.95rem; font-weight: 800; color: var(--orange-deep); margin-bottom: 8px; }
+    .info-box p { font-size: 0.88rem; line-height: 1.7; color: var(--muted-lt); margin: 0; }
+
+    .related-links-card {
+      background: white; border-radius: var(--radius);
+      border: 1.5px solid rgba(249,115,22,0.1);
+      box-shadow: 0 4px 20px rgba(249,115,22,0.06);
+      padding: 28px; grid-column: 1 / -1;
+    }
+    .related-links-card h3 { font-size: 1rem; font-weight: 800; color: var(--ink); margin-bottom: 16px; }
+    .rlink-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+    .rlink {
+      display: flex; align-items: center; gap: 10px; padding: 14px 16px;
+      background: var(--orange-pale); border-radius: 12px; text-decoration: none;
+      border: 2px solid transparent; transition: all 0.2s;
+    }
+    .rlink:hover { border-color: var(--orange); transform: translateY(-2px); }
+    .rlink-icon { font-size: 1.25rem; }
+    .rlink-title { font-size: 0.88rem; font-weight: 700; color: var(--ink); }
+    .rlink-desc { font-size: 0.75rem; color: var(--muted-lt); margin-top: 1px; }
+
+    /* Footer */
+    footer {
+      background: var(--ink); padding: 60px 6vw 30px;
+      color: rgba(255,255,255,0.45); position: relative; z-index: 1;
+    }
+    .footer-top {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.07);
+      gap: 40px; flex-wrap: wrap;
+    }
+    .footer-logo .logo-text { color: white; }
+    .footer-tagline { font-size: 0.87rem; color: rgba(255,255,255,0.35); margin-top: 10px; max-width: 240px; line-height: 1.65; }
+    .footer-col h4 { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a { text-decoration: none; font-size: 0.88rem; font-weight: 500; color: rgba(255,255,255,0.55); transition: color 0.2s; }
+    .footer-col a:hover { color: var(--orange); }
+    .footer-bottom { padding-top: 26px; display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; gap: 16px; flex-wrap: wrap; }
+
+    @media(max-width: 768px) {
+      .calc-wrapper { grid-template-columns: 1fr; }
+      .results-card { position: static; }
+      .below-grid { grid-template-columns: 1fr; }
+      .rlink-grid { grid-template-columns: 1fr 1fr; }
+      .card, .results-card { padding: 28px 22px; }
+      .page-hero { padding: 120px 5vw 52px; }
+    }
+    @media(max-width: 640px) {
+      .nav-links { display: none; }
+      .rlink-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-sun">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round">
+        <circle cx="12" cy="12" r="4.5"/>
+        <line x1="12" y1="1.5" x2="12" y2="3.5"/><line x1="12" y1="20.5" x2="12" y2="22.5"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1.5" y1="12" x2="3.5" y2="12"/><line x1="20.5" y1="12" x2="22.5" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+    </div>
+    <span class="logo-text">Sun<span>Ready</span> Solar</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/guides">Free Guides</a></li>
+    <li><a href="/tools">Tools</a></li>
+    <li><a href="/how-it-works">How It Works</a></li>
+    <li><a href="/faq">FAQ</a></li>
+    <li><a href="/quote" class="nav-cta">Get a Free Quote</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-content">
+    <div class="eyebrow">Free Tool · No Sign-Up Required</div>
+    <h1>Solar <span class="highlight">Savings</span> Calculator</h1>
+    <p class="subtitle">Enter your bill and location for a personalised estimate of annual savings, payback period, and what you'd pocket over 25 years.</p>
+  </div>
+</section>
+
+<section class="calc-section">
+  <div class="calc-wrapper">
+
+    <!-- Input card -->
+    <div class="card">
+      <h2>📋 Your details</h2>
+
+      <div class="form-group">
+        <label for="state">State / Territory</label>
+        <select id="state">
+          <option value="">Select your state…</option>
+          <option value="QLD">Queensland (QLD)</option>
+          <option value="NSW">New South Wales (NSW)</option>
+          <option value="VIC">Victoria (VIC)</option>
+          <option value="SA">South Australia (SA)</option>
+          <option value="WA">Western Australia (WA)</option>
+          <option value="ACT">ACT / Canberra</option>
+          <option value="TAS">Tasmania (TAS)</option>
+          <option value="NT">Northern Territory (NT)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="bill">Average quarterly electricity bill <span>(before solar)</span></label>
+        <div class="input-prefix">
+          <span>$</span>
+          <input type="number" id="bill" placeholder="e.g. 450" min="50" max="5000" step="10" />
+        </div>
+        <p class="hint">Check your last 2–3 bills and use the average.</p>
+      </div>
+
+      <div class="form-group">
+        <label for="roof">Roof orientation</label>
+        <select id="roof">
+          <option value="1.0">North-facing (ideal)</option>
+          <option value="0.93">North-east or North-west</option>
+          <option value="0.85">East or West</option>
+          <option value="0.72">South-east or South-west</option>
+          <option value="0.60">South-facing</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="selfuse">Daytime self-consumption <span>(% of solar used in home)</span></label>
+        <div class="slider-wrap">
+          <input type="range" id="selfuse" min="20" max="80" value="40" step="5" />
+          <span class="slider-val" id="selfuse-val">40%</span>
+        </div>
+        <p class="hint">Work from home = higher. Out all day = lower (20–30%). Average household ~40%.</p>
+      </div>
+
+      <div class="form-group">
+        <label for="size">System size <span>(kW)</span></label>
+        <div class="slider-wrap">
+          <input type="range" id="size" min="3" max="20" value="6.6" step="0.1" />
+          <span class="slider-val" id="size-val">6.6 kW</span>
+        </div>
+        <p class="hint">6.6 kW is the most common residential size in Australia.</p>
+      </div>
+
+      <button class="calc-btn" onclick="calculate()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 7H6a2 2 0 00-2 2v9a2 2 0 002 2h9a2 2 0 002-2v-3M16 5l-8 8M16 5h-4m4 0v4"/></svg>
+        Calculate My Savings
+      </button>
+    </div>
+
+    <!-- Results card -->
+    <div class="results-card">
+      <h2>📊 Your estimate</h2>
+
+      <div class="results-placeholder" id="results-placeholder">
+        <span class="big-icon">☀️</span>
+        Fill in your details and click <strong>Calculate</strong> to see your personalised solar savings estimate.
+      </div>
+
+      <div class="results-body" id="results-body">
+        <div class="stat-row">
+          <span class="stat-label">Recommended system</span>
+          <span class="stat-value" id="r-system">—</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Est. annual generation</span>
+          <span class="stat-value" id="r-gen">—</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Annual bill savings</span>
+          <span class="stat-value big" id="r-savings">—</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Feed-in income (est.)</span>
+          <span class="stat-value green" id="r-fit">—</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Federal rebate (STCs)</span>
+          <span class="stat-value green" id="r-rebate">—</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Est. system cost (after rebate)</span>
+          <span class="stat-value" id="r-cost">—</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Est. payback period</span>
+          <span class="stat-value" id="r-payback">—</span>
+        </div>
+
+        <div class="projection-bar-wrap" style="margin-top:24px">
+          <div class="proj-label">
+            <span>25-year cumulative savings</span>
+            <span id="r-25yr">—</span>
+          </div>
+          <div class="proj-bar"><div class="proj-bar-fill" id="proj-fill" style="width:0%"></div></div>
+          <div class="proj-label">
+            <span>10-year cumulative savings</span>
+            <span id="r-10yr">—</span>
+          </div>
+          <div class="proj-bar"><div class="proj-bar-fill" id="proj-fill-10" style="width:0%; background: linear-gradient(90deg,var(--orange-deep),var(--orange))"></div></div>
+        </div>
+
+        <p class="disclaimer">Estimates based on current electricity tariffs, feed-in rates, and solar irradiance data for your state. Actual savings depend on your usage patterns, tariff plan, shading, and panel orientation. Use this as a guide — get quotes from accredited installers for precise figures.</p>
+
+        <a href="/quote" class="results-cta">
+          Get Real Quotes From Local Installers
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div><!-- end calc-wrapper -->
+
+  <!-- Below the fold -->
+  <div class="below-grid">
+    <div class="info-box">
+      <h4>⚡ How we calculate</h4>
+      <p>We use state-specific electricity rates, solar irradiance (peak sun hours), standard 0.5% annual degradation, and the 2026 STC rebate schedule. Feed-in tariff is estimated at the current state average. All figures in today's dollars.</p>
+    </div>
+    <div class="info-box">
+      <h4>💡 Want a precise number?</h4>
+      <p>This tool gives you a solid ballpark. For a figure specific to your roof, shading, tariff plan, and usage profile, a CEC-accredited installer will provide a detailed proposal — obligation free.</p>
+    </div>
+
+    <div class="related-links-card">
+      <h3>📚 Read before you buy</h3>
+      <div class="rlink-grid">
+        <a href="/guides/solar-101" class="rlink">
+          <span class="rlink-icon">☀️</span>
+          <div><div class="rlink-title">Solar 101</div><div class="rlink-desc">How solar actually works</div></div>
+        </a>
+        <a href="/guides/best-solar-panels" class="rlink">
+          <span class="rlink-icon">⚡</span>
+          <div><div class="rlink-title">Best Solar Panels 2026</div><div class="rlink-desc">Top brands compared</div></div>
+        </a>
+        <a href="/guides/rebates" class="rlink">
+          <span class="rlink-icon">💰</span>
+          <div><div class="rlink-title">Rebate Guide 2026</div><div class="rlink-desc">Federal &amp; state incentives</div></div>
+        </a>
+        <a href="/guides/battery-storage" class="rlink">
+          <span class="rlink-icon">🔋</span>
+          <div><div class="rlink-title">Battery Storage</div><div class="rlink-desc">Do you actually need one?</div></div>
+        </a>
+        <a href="/tools/quote-checklist" class="rlink">
+          <span class="rlink-icon">✅</span>
+          <div><div class="rlink-title">Quote Checklist</div><div class="rlink-desc">Compare quotes confidently</div></div>
+        </a>
+        <a href="/how-it-works" class="rlink">
+          <span class="rlink-icon">🗺️</span>
+          <div><div class="rlink-title">How It Works</div><div class="rlink-desc">The SunReady process</div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo">
+      <a href="/" class="logo" style="display:inline-flex;margin-bottom:10px;">
+        <div class="logo-sun">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4.5"/>
+            <line x1="12" y1="1.5" x2="12" y2="3.5"/><line x1="12" y1="20.5" x2="12" y2="22.5"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1.5" y1="12" x2="3.5" y2="12"/><line x1="20.5" y1="12" x2="22.5" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </div>
+        <span class="logo-text">Sun<span>Ready</span> Solar</span>
+      </a>
+      <p class="footer-tagline">Australia's free solar education hub. Learn, compare, and save, on your terms.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Free Tools</h4>
+      <ul>
+        <li><a href="/tools/savings-calculator">Savings Calculator</a></li>
+        <li><a href="/tools/quote-checklist">Quote Checklist</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Free Guides</h4>
+      <ul>
+        <li><a href="/guides/solar-101">Solar 101 Guide</a></li>
+        <li><a href="/guides/best-solar-panels">Best Solar Panels</a></li>
+        <li><a href="/guides/rebates">Rebate Guide 2026</a></li>
+        <li><a href="/guides/battery-storage">Battery Guide</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/how-it-works">How It Works</a></li>
+        <li><a href="/installer-network">Installer Network</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-of-use">Terms of Use</a></li>
+        <li><a href="/disclaimer">Disclaimer</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 SunReady Solar &middot; sunreadysolar.com.au &middot; All rights reserved.</span>
+    <span>Australian-owned and operated</span>
+  </div>
+</footer>
+
+<script>
+  // State data: [avgTariff c/kWh, feedInTariff c/kWh, peakSunHours/day, stcZone multiplier, avgElecRate]
+  const STATE_DATA = {
+    QLD: { tariff: 0.315, fit: 0.08,  sun: 5.0, zone: 1.382 },
+    NSW: { tariff: 0.310, fit: 0.06,  sun: 4.6, zone: 1.185 },
+    VIC: { tariff: 0.305, fit: 0.045, sun: 4.1, zone: 1.026 },
+    SA:  { tariff: 0.425, fit: 0.065, sun: 4.8, zone: 1.234 },
+    WA:  { tariff: 0.290, fit: 0.025, sun: 5.2, zone: 1.339 },
+    ACT: { tariff: 0.230, fit: 0.06,  sun: 4.5, zone: 1.185 },
+    TAS: { tariff: 0.295, fit: 0.065, sun: 3.7, zone: 0.952 },
+    NT:  { tariff: 0.270, fit: 0.08,  sun: 5.8, zone: 1.536 },
+  };
+
+  // STC rebate: ~$38.50 per STC, roughly 1.382 STCs per kW per zone
+  const STC_VALUE = 38.50;
+  // Cost per watt installed (before rebate)
+  const COST_PER_W = 1.05;
+  // Annual degradation
+  const DEGRADATION = 0.005;
+
+  // Slider live updates
+  const selfuseSlider = document.getElementById('selfuse');
+  const selfuseVal    = document.getElementById('selfuse-val');
+  const sizeSlider    = document.getElementById('size');
+  const sizeVal       = document.getElementById('size-val');
+
+  selfuseSlider.addEventListener('input', () => {
+    selfuseVal.textContent = selfuseSlider.value + '%';
+    updateSliderFill(selfuseSlider);
+  });
+  sizeSlider.addEventListener('input', () => {
+    sizeVal.textContent = parseFloat(sizeSlider.value).toFixed(1) + ' kW';
+    updateSliderFill(sizeSlider);
+  });
+
+  function updateSliderFill(slider) {
+    const pct = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
+    slider.style.background = `linear-gradient(to right, var(--orange) 0%, var(--orange) ${pct}%, var(--orange-mid) ${pct}%, var(--orange-mid) 100%)`;
+  }
+
+  function fmt(n) {
+    return '$' + Math.round(n).toLocaleString('en-AU');
+  }
+
+  function calculate() {
+    const stateKey  = document.getElementById('state').value;
+    const bill      = parseFloat(document.getElementById('bill').value);
+    const roofFactor= parseFloat(document.getElementById('roof').value);
+    const selfuse   = parseFloat(selfuseSlider.value) / 100;
+    const sizeKW    = parseFloat(sizeSlider.value);
+
+    if (!stateKey || !bill || isNaN(bill) || bill < 50) {
+      alert('Please select your state and enter your quarterly electricity bill to continue.');
+      return;
+    }
+
+    const d = STATE_DATA[stateKey];
+
+    // Annual generation
+    const annualGen = sizeKW * d.sun * 365 * roofFactor * 0.82; // 0.82 system losses
+
+    // Self-consumed vs exported
+    const selfConsumed = annualGen * selfuse;
+    const exported     = annualGen * (1 - selfuse);
+
+    // Bill savings from self-consumption
+    const savingsFromSelf = selfConsumed * d.tariff;
+
+    // Feed-in income from exports
+    const fitIncome = exported * d.fit;
+
+    // Total annual benefit
+    const totalAnnualBenefit = savingsFromSelf + fitIncome;
+
+    // STC rebate: derate 13 years remaining (2026 deeming period ends 2030 from 2012 — simplified)
+    const stcs = sizeKW * d.zone * 9; // approx deeming years remaining
+    const rebate = stcs * STC_VALUE;
+
+    // System cost
+    const grossCost = sizeKW * 1000 * COST_PER_W;
+    const netCost   = Math.max(grossCost - rebate, 0);
+
+    // Payback
+    const paybackYrs = netCost / totalAnnualBenefit;
+
+    // 10 and 25-year projections (with degradation, no tariff escalation)
+    let cumulative25 = 0, cumulative10 = 0;
+    for (let yr = 1; yr <= 25; yr++) {
+      const degFactor = Math.pow(1 - DEGRADATION, yr - 1);
+      const yearBenefit = totalAnnualBenefit * degFactor;
+      cumulative25 += yearBenefit;
+      if (yr <= 10) cumulative10 += yearBenefit;
+    }
+    // Subtract net cost for true profit
+    const profit25 = cumulative25 - netCost;
+    const profit10 = cumulative10 - netCost;
+
+    // Populate results
+    document.getElementById('r-system').textContent   = sizeKW.toFixed(1) + ' kW';
+    document.getElementById('r-gen').textContent      = Math.round(annualGen).toLocaleString('en-AU') + ' kWh/yr';
+    document.getElementById('r-savings').textContent  = fmt(savingsFromSelf) + '/yr';
+    document.getElementById('r-fit').textContent      = fmt(fitIncome) + '/yr';
+    document.getElementById('r-rebate').textContent   = fmt(rebate);
+    document.getElementById('r-cost').textContent     = fmt(netCost);
+    document.getElementById('r-payback').textContent  = paybackYrs.toFixed(1) + ' years';
+    document.getElementById('r-25yr').textContent     = fmt(profit25);
+    document.getElementById('r-10yr').textContent     = fmt(Math.max(profit10, 0));
+
+    // Bars — 25yr profit as 100%, 10yr relative
+    const pct25 = Math.min(100, (cumulative25 / (grossCost * 3)) * 100);
+    const pct10 = Math.min(100, (cumulative10 / (grossCost * 3)) * 100);
+    setTimeout(() => {
+      document.getElementById('proj-fill').style.width    = pct25 + '%';
+      document.getElementById('proj-fill-10').style.width = pct10 + '%';
+    }, 50);
+
+    document.getElementById('results-placeholder').style.display = 'none';
+    const rb = document.getElementById('results-body');
+    rb.classList.add('visible');
+
+    // GA event
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'calculator_result', { state: stateKey, system_size: sizeKW, annual_savings: Math.round(totalAnnualBenefit) });
+    }
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'ViewContent', { content_name: 'savings_calculator_result' });
+    }
+  }
+
+  // Allow Enter key to trigger calc
+  document.addEventListener('keydown', (e) => { if (e.key === 'Enter') calculate(); });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solar Quote Comparison Checklist 2026 | SunReady Solar</title>
+  <meta name="description" content="Use this free interactive checklist to compare solar quotes side-by-side. 50+ checkpoints covering panels, inverters, warranties, contracts and red flags." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S1FMEYNDZP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S1FMEYNDZP');
+  </script>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1212625634188099');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1212625634188099&ev=PageView&noscript=1" /></noscript>
+
+  <style>
+    :root {
+      --orange:     #F97316;
+      --orange-deep:#EA580C;
+      --orange-pale:#FFF7ED;
+      --orange-mid: #FED7AA;
+      --yellow:     #FCD34D;
+      --yellow-pale:#FFFBEB;
+      --white:      #FFFFFF;
+      --ink:        #1C0A00;
+      --ink-mid:    #7C3504;
+      --muted:      #92400E;
+      --muted-lt:   #C2724F;
+      --border:     rgba(249,115,22,0.15);
+      --radius:     20px;
+      --green:      #16A34A;
+      --green-pale: #DCFCE7;
+      --red:        #DC2626;
+      --red-pale:   #FEF2F2;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--orange-pale); color: var(--ink); overflow-x: hidden; }
+    body::before {
+      content: ''; position: fixed; top: -40vh; left: 50%; transform: translateX(-50%);
+      width: 180vw; height: 180vw;
+      background: conic-gradient(from 0deg, rgba(252,211,77,0.06) 0deg, rgba(249,115,22,0.04) 10deg, rgba(252,211,77,0.06) 20deg, rgba(249,115,22,0.03) 30deg, rgba(252,211,77,0.06) 40deg, rgba(249,115,22,0.04) 50deg, rgba(252,211,77,0.06) 60deg, rgba(249,115,22,0.03) 70deg, rgba(252,211,77,0.06) 80deg, rgba(249,115,22,0.04) 90deg, rgba(252,211,77,0.06) 100deg, rgba(249,115,22,0.03) 110deg, rgba(252,211,77,0.06) 120deg, rgba(249,115,22,0.04) 130deg, rgba(252,211,77,0.06) 140deg, rgba(249,115,22,0.03) 150deg, rgba(252,211,77,0.06) 160deg, rgba(249,115,22,0.04) 170deg, rgba(252,211,77,0.06) 180deg, rgba(249,115,22,0.03) 190deg, rgba(252,211,77,0.06) 200deg, rgba(249,115,22,0.04) 210deg, rgba(252,211,77,0.06) 220deg, rgba(249,115,22,0.03) 230deg, rgba(252,211,77,0.06) 240deg, rgba(249,115,22,0.04) 250deg, rgba(252,211,77,0.06) 260deg, rgba(249,115,22,0.03) 270deg, rgba(252,211,77,0.06) 280deg, rgba(249,115,22,0.04) 290deg, rgba(252,211,77,0.06) 300deg, rgba(249,115,22,0.03) 310deg, rgba(252,211,77,0.06) 320deg, rgba(249,115,22,0.04) 330deg, rgba(252,211,77,0.06) 340deg, rgba(249,115,22,0.03) 350deg, rgba(252,211,77,0.06) 360deg);
+      border-radius: 50%; pointer-events: none; z-index: 0;
+    }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 6vw; background: rgba(255,247,237,0.9);
+      backdrop-filter: blur(18px); border-bottom: 1px solid var(--border);
+    }
+    .logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+    .logo-sun {
+      width: 38px; height: 38px; background: linear-gradient(135deg, var(--yellow), var(--orange));
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 0 5px rgba(252,211,77,0.25), 0 0 0 10px rgba(249,115,22,0.08);
+      animation: pulse-sun 3s ease-in-out infinite; flex-shrink: 0;
+    }
+    .logo-sun svg { width: 20px; height: 20px; }
+    @keyframes pulse-sun {
+      0%,100% { box-shadow: 0 0 0 5px rgba(252,211,77,0.25), 0 0 0 10px rgba(249,115,22,0.08); }
+      50%      { box-shadow: 0 0 0 8px rgba(252,211,77,0.3),  0 0 0 16px rgba(249,115,22,0.05); }
+    }
+    .logo-text { font-size: 1.3rem; font-weight: 800; color: var(--ink); letter-spacing: -0.03em; }
+    .logo-text span { color: var(--orange); }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { text-decoration: none; font-size: 0.9rem; font-weight: 600; color: var(--muted); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--orange-deep); }
+    .nav-cta {
+      background: linear-gradient(135deg, var(--orange), var(--orange-deep)) !important;
+      color: white !important; padding: 11px 24px !important; border-radius: 100px;
+      font-weight: 700 !important; font-size: 0.88rem !important;
+      box-shadow: 0 4px 16px rgba(249,115,22,0.35); transition: transform 0.2s, box-shadow 0.2s !important;
+    }
+    .nav-cta:hover { transform: translateY(-1px) !important; box-shadow: 0 8px 24px rgba(249,115,22,0.45) !important; }
+
+    .page-hero {
+      min-height: 44vh; padding: 140px 6vw 60px;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; position: relative; z-index: 1;
+    }
+    .page-hero-content { max-width: 680px; }
+    .eyebrow {
+      font-size: 0.78rem; font-weight: 800; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--orange); margin-bottom: 16px;
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--yellow-pale), var(--orange-pale));
+      border: 1.5px solid rgba(249,115,22,0.2); border-radius: 100px; padding: 7px 18px;
+    }
+    .page-hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem); font-weight: 900; color: var(--ink);
+      letter-spacing: -0.04em; line-height: 1.08; margin-bottom: 18px;
+    }
+    .page-hero h1 .highlight {
+      background: linear-gradient(135deg, var(--orange), var(--yellow));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .page-hero .subtitle { font-size: 1.08rem; color: var(--muted-lt); line-height: 1.75; max-width: 520px; margin: 0 auto; }
+
+    /* Layout */
+    .checklist-section { padding: 0 6vw 100px; position: relative; z-index: 1; }
+    .checklist-wrapper { max-width: 860px; margin: 0 auto; }
+
+    /* Sticky progress bar */
+    .progress-bar-wrap {
+      position: sticky; top: 75px; z-index: 50;
+      background: white; border-radius: var(--radius);
+      border: 1.5px solid rgba(249,115,22,0.1);
+      box-shadow: 0 4px 20px rgba(249,115,22,0.1);
+      padding: 20px 28px; margin-bottom: 28px;
+      display: flex; align-items: center; gap: 20px;
+    }
+    .progress-bar-wrap .label { font-size: 0.88rem; font-weight: 700; color: var(--ink); white-space: nowrap; }
+    .prog-track { flex: 1; height: 10px; background: var(--orange-pale); border-radius: 5px; overflow: hidden; }
+    .prog-fill { height: 100%; border-radius: 5px; background: linear-gradient(90deg, var(--orange), var(--yellow)); transition: width 0.4s ease; width: 0%; }
+    .prog-count { font-size: 1rem; font-weight: 900; color: var(--orange); white-space: nowrap; min-width: 56px; text-align: right; }
+    .btn-print {
+      display: inline-flex; align-items: center; gap: 6px;
+      border: 2px solid rgba(249,115,22,0.3); color: var(--orange-deep);
+      background: none; font-family: 'Outfit', sans-serif; font-weight: 700;
+      font-size: 0.82rem; padding: 9px 16px; border-radius: 100px;
+      cursor: pointer; transition: all 0.18s; white-space: nowrap;
+    }
+    .btn-print:hover { border-color: var(--orange); background: var(--orange-pale); }
+    .btn-reset {
+      display: inline-flex; align-items: center; gap: 6px;
+      border: 2px solid rgba(0,0,0,0.1); color: var(--muted-lt);
+      background: none; font-family: 'Outfit', sans-serif; font-weight: 700;
+      font-size: 0.82rem; padding: 9px 16px; border-radius: 100px;
+      cursor: pointer; transition: all 0.18s; white-space: nowrap;
+    }
+    .btn-reset:hover { border-color: var(--muted-lt); }
+
+    /* Category card */
+    .category-card {
+      background: white; border-radius: var(--radius);
+      border: 1.5px solid rgba(249,115,22,0.1);
+      box-shadow: 0 4px 20px rgba(249,115,22,0.06);
+      margin-bottom: 20px; overflow: hidden;
+    }
+    .category-header {
+      padding: 22px 28px; display: flex; align-items: center; gap: 14px;
+      border-bottom: 2px solid var(--orange-pale); cursor: pointer;
+      user-select: none;
+    }
+    .category-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .category-title { font-size: 1.1rem; font-weight: 900; color: var(--ink); letter-spacing: -0.02em; flex: 1; }
+    .category-meta { font-size: 0.8rem; font-weight: 700; color: var(--muted-lt); white-space: nowrap; }
+    .category-meta.done { color: var(--green); }
+    .cat-chevron {
+      width: 20px; height: 20px; color: var(--muted-lt);
+      transition: transform 0.2s; flex-shrink: 0;
+    }
+    .category-card.open .cat-chevron { transform: rotate(180deg); }
+    .category-body { display: none; padding: 8px 0 16px; }
+    .category-card.open .category-body { display: block; }
+
+    /* Checklist items */
+    .checklist-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 13px 28px; cursor: pointer;
+      transition: background 0.15s; border-radius: 0;
+    }
+    .checklist-item:hover { background: var(--orange-pale); }
+    .checklist-item.checked { background: var(--green-pale); }
+    .checklist-item.flagged { background: var(--red-pale); }
+
+    .check-box {
+      width: 22px; height: 22px; border-radius: 6px;
+      border: 2px solid var(--orange-mid); background: white;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 1px; transition: all 0.15s;
+    }
+    .checklist-item.checked .check-box { background: var(--green); border-color: var(--green); }
+    .checklist-item.flagged .check-box { background: var(--red); border-color: var(--red); }
+    .check-box svg { width: 13px; height: 13px; color: white; opacity: 0; transition: opacity 0.15s; }
+    .checklist-item.checked .check-box svg,
+    .checklist-item.flagged .check-box svg { opacity: 1; }
+
+    .item-content { flex: 1; }
+    .item-label { font-size: 0.95rem; font-weight: 700; color: var(--ink); line-height: 1.4; }
+    .item-hint { font-size: 0.8rem; color: var(--muted-lt); margin-top: 3px; line-height: 1.5; }
+    .item-tag {
+      display: inline-block; font-size: 0.65rem; font-weight: 800;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 2px 8px; border-radius: 100px; margin-left: 6px; vertical-align: middle;
+    }
+    .tag-must { background: #FEE2E2; color: #991B1B; }
+    .tag-flag { background: #FEF3C7; color: #92400E; }
+
+    /* Divider within category */
+    .cat-divider {
+      font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--orange); padding: 12px 28px 4px; margin-top: 8px;
+    }
+
+    /* Score section */
+    .score-card {
+      background: white; border-radius: var(--radius);
+      border: 1.5px solid rgba(249,115,22,0.1);
+      box-shadow: 0 4px 20px rgba(249,115,22,0.06);
+      padding: 36px 40px; margin-bottom: 28px;
+    }
+    .score-card h3 { font-size: 1.05rem; font-weight: 800; color: var(--ink); margin-bottom: 20px; }
+    .score-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+    .score-box { background: var(--orange-pale); border-radius: 14px; padding: 20px; text-align: center; }
+    .score-box .score-num { font-size: 2rem; font-weight: 900; color: var(--orange); display: block; }
+    .score-box .score-label { font-size: 0.8rem; font-weight: 700; color: var(--muted-lt); margin-top: 4px; display: block; }
+    .score-bar-wrap { margin-top: 20px; }
+    .score-bar-label { display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 700; color: var(--muted-lt); margin-bottom: 6px; }
+    .score-bar { height: 12px; background: var(--orange-pale); border-radius: 6px; overflow: hidden; }
+    .score-bar-fill { height: 100%; border-radius: 6px; transition: width 0.5s ease, background 0.5s ease; background: var(--orange); }
+    .verdict { margin-top: 16px; padding: 16px 20px; border-radius: 12px; font-size: 0.9rem; font-weight: 700; display: none; }
+    .verdict.show { display: block; }
+    .verdict.good { background: var(--green-pale); color: var(--green); }
+    .verdict.ok { background: var(--yellow-pale); color: #92400E; }
+    .verdict.bad { background: var(--red-pale); color: var(--red); }
+
+    /* CTA */
+    .cta-box {
+      background: linear-gradient(135deg, var(--orange-deep), var(--orange));
+      border-radius: var(--radius); padding: 48px; text-align: center; color: white;
+    }
+    .cta-box h3 { font-size: 1.7rem; font-weight: 900; margin-bottom: 12px; color: white; }
+    .cta-box p { font-size: 1.05rem; opacity: 0.9; margin-bottom: 24px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .btn-white {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: white; color: var(--orange-deep); font-weight: 800;
+      padding: 16px 32px; border-radius: 100px; text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+    /* Footer */
+    footer { background: var(--ink); padding: 60px 6vw 30px; color: rgba(255,255,255,0.45); position: relative; z-index: 1; }
+    .footer-top { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.07); gap: 40px; flex-wrap: wrap; }
+    .footer-logo .logo-text { color: white; }
+    .footer-tagline { font-size: 0.87rem; color: rgba(255,255,255,0.35); margin-top: 10px; max-width: 240px; line-height: 1.65; }
+    .footer-col h4 { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 14px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a { text-decoration: none; font-size: 0.88rem; font-weight: 500; color: rgba(255,255,255,0.55); transition: color 0.2s; }
+    .footer-col a:hover { color: var(--orange); }
+    .footer-bottom { padding-top: 26px; display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; gap: 16px; flex-wrap: wrap; }
+
+    @media(max-width:768px) {
+      .progress-bar-wrap { flex-wrap: wrap; gap: 12px; top: 70px; padding: 16px 20px; }
+      .category-header { padding: 18px 20px; }
+      .checklist-item { padding: 12px 20px; }
+      .cat-divider { padding: 10px 20px 2px; }
+      .score-card { padding: 24px 20px; }
+      .score-grid { grid-template-columns: 1fr 1fr; }
+      .page-hero { padding: 120px 5vw 52px; }
+    }
+    @media(max-width:640px) {
+      .nav-links { display: none; }
+      .score-grid { grid-template-columns: 1fr; }
+      .cta-box { padding: 32px 22px; }
+    }
+
+    @media print {
+      nav, .progress-bar-wrap, .btn-print, .btn-reset, .cta-box, footer { display: none !important; }
+      body::before { display: none; }
+      .page-hero { min-height: auto; padding: 20px; }
+      .checklist-section { padding: 0 20px 20px; }
+      .category-body { display: block !important; }
+      .checklist-item { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-sun">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round">
+        <circle cx="12" cy="12" r="4.5"/>
+        <line x1="12" y1="1.5" x2="12" y2="3.5"/><line x1="12" y1="20.5" x2="12" y2="22.5"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1.5" y1="12" x2="3.5" y2="12"/><line x1="20.5" y1="12" x2="22.5" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+    </div>
+    <span class="logo-text">Sun<span>Ready</span> Solar</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/guides">Free Guides</a></li>
+    <li><a href="/tools">Tools</a></li>
+    <li><a href="/how-it-works">How It Works</a></li>
+    <li><a href="/faq">FAQ</a></li>
+    <li><a href="/quote" class="nav-cta">Get a Free Quote</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-content">
+    <div class="eyebrow">Free Tool · 50+ Checkpoints</div>
+    <h1>Quote <span class="highlight">Comparison</span> Checklist</h1>
+    <p class="subtitle">Tick each item off as you review a solar quote. Spots red flags, hidden costs and missing inclusions before you sign anything.</p>
+  </div>
+</section>
+
+<section class="checklist-section">
+  <div class="checklist-wrapper">
+
+    <!-- Sticky progress -->
+    <div class="progress-bar-wrap">
+      <span class="label">Progress</span>
+      <div class="prog-track"><div class="prog-fill" id="progFill"></div></div>
+      <span class="prog-count" id="progCount">0 / 0</span>
+      <button class="btn-print" onclick="window.print()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Print
+      </button>
+      <button class="btn-reset" onclick="resetAll()">Reset</button>
+    </div>
+
+    <!-- Score summary -->
+    <div class="score-card">
+      <h3>📊 Your score at a glance</h3>
+      <div class="score-grid">
+        <div class="score-box"><span class="score-num" id="score-checked">0</span><span class="score-label">Items confirmed</span></div>
+        <div class="score-box"><span class="score-num" id="score-unchecked" style="color:var(--muted-lt)">0</span><span class="score-label">Not yet checked</span></div>
+        <div class="score-box"><span class="score-num" id="score-pct" style="color:var(--green)">–</span><span class="score-label">Completion</span></div>
+      </div>
+      <div class="score-bar-wrap">
+        <div class="score-bar-label"><span>Quote confidence score</span><span id="score-label-pct">–</span></div>
+        <div class="score-bar"><div class="score-bar-fill" id="score-bar-fill" style="width:0%"></div></div>
+      </div>
+      <div class="verdict" id="verdict-good">✅ Strong quote — all key items confirmed. Go ahead with confidence.</div>
+      <div class="verdict" id="verdict-ok">⚠️ Most items confirmed — a few gaps to follow up before signing.</div>
+      <div class="verdict" id="verdict-bad">🚩 Several items unchecked — get answers before you proceed.</div>
+    </div>
+
+    <!-- Categories -->
+
+    <div class="category-card open" id="cat-installer">
+      <div class="category-header" onclick="toggleCat('cat-installer')">
+        <span class="category-icon">🏗️</span>
+        <span class="category-title">Installer Credentials</span>
+        <span class="category-meta" id="meta-cat-installer">0 / 7</span>
+        <svg class="cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="category-body">
+        <div class="checklist-item" data-cat="cat-installer" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">CEC-accredited installer <span class="item-tag tag-must">Must Have</span></div><div class="item-hint">Verify at solaraccreditation.com.au. Required by law for grid-connected systems and to claim STCs (rebate).</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-installer" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Electrical contractor licence (A-grade electrician)</div><div class="item-hint">All grid-connected wiring must be done by a licensed electrician. Ask for their licence number.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-installer" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Public liability insurance (minimum $10M) <span class="item-tag tag-must">Must Have</span></div><div class="item-hint">Protects you if something goes wrong during installation. Ask for certificate of currency.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-installer" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Workers' compensation insurance</div><div class="item-hint">Covers installer's employees while working on your roof. Your home insurance won't cover this.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-installer" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Local company with verifiable address</div><div class="item-hint">Not a pop-up or interstate company. Search ABN and address. Local companies are more likely to honour warranties.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-installer" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Genuine reviews (Google, Product Review, SolarQuotes)</div><div class="item-hint">Look for 50+ reviews with specific detail. Beware of sudden influxes of generic 5-star reviews.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-installer" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">No pressure to sign on the day</div><div class="item-hint">Legitimate installers encourage you to compare quotes. Pressure to sign is a red flag.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-card open" id="cat-panels">
+      <div class="category-header" onclick="toggleCat('cat-panels')">
+        <span class="category-icon">⚡</span>
+        <span class="category-title">Solar Panels</span>
+        <span class="category-meta" id="meta-cat-panels">0 / 9</span>
+        <svg class="cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="category-body">
+        <div class="checklist-item" data-cat="cat-panels" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Exact make and model specified in writing <span class="item-tag tag-must">Must Have</span></div><div class="item-hint">Never accept "panels TBC" or a brand name without model number. You need to know exactly what's being installed.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-panels" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Panels on CEC approved product list <span class="item-tag tag-must">Must Have</span></div><div class="item-hint">Check solaraccreditation.com.au. Non-listed panels don't qualify for the STC rebate.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-panels" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">IEC 61215 and IEC 61730 certifications</div><div class="item-hint">Baseline international standards for performance and safety. Non-negotiable.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-panels" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Positive-only power tolerance (0/+W) <span class="item-tag tag-flag">Check This</span></div><div class="item-hint">Avoid panels with ±3% or negative tolerance — you could receive panels weaker than advertised.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-panels" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Product (workmanship) warranty: minimum 12 years</div><div class="item-hint">Covers manufacturing defects. Premium brands offer 15–25 years. Less than 10 years is below industry standard.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-panels" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Performance warranty: minimum 80% at 25 years</div><div class="item-hint">The linear performance guarantee. Top-tier brands now offer 87%+ at 25–30 years.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-panels" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Australian warranty support (local office or agent)</div><div class="item-hint">A 25-year warranty from a manufacturer with no Australian presence is nearly impossible to enforce.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-panels" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Panel efficiency ≥ 20% (≥ 22% for limited roof space)</div><div class="item-hint">Lower efficiency isn't necessarily bad — it just means more panels for the same output.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-panels" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Temperature coefficient stated (–0.35%/°C or better)</div><div class="item-hint">Especially important in hot climates (QLD, NT, WA, SA). Lower is better for Australian summers.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-card open" id="cat-inverter">
+      <div class="category-header" onclick="toggleCat('cat-inverter')">
+        <span class="category-icon">🔌</span>
+        <span class="category-title">Inverter</span>
+        <span class="category-meta" id="meta-cat-inverter">0 / 7</span>
+        <svg class="cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="category-body">
+        <div class="checklist-item" data-cat="cat-inverter" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Exact brand and model specified in writing <span class="item-tag tag-must">Must Have</span></div><div class="item-hint">The inverter is the brain of your system. Never accept a quote without a specific model.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-inverter" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">CEC approved inverter list <span class="item-tag tag-must">Must Have</span></div><div class="item-hint">Like panels, inverters must be CEC-listed to qualify for rebates. Verify at solaraccreditation.com.au.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-inverter" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Inverter warranty: minimum 5 years (10 preferred)</div><div class="item-hint">Leading brands (Fronius, SolarEdge, Sungrow, Enphase) offer 10–12 years. Some can be extended for a fee.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-inverter" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Australian service centre or local distributor</div><div class="item-hint">Inverters are the most likely component to fail. Local service means faster repair turnaround.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-inverter" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Monitoring app/portal included <span class="item-tag tag-flag">Check This</span></div><div class="item-hint">All modern inverters include monitoring. If yours doesn't, you'll have no way to spot underperformance early.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-inverter" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Inverter sized correctly (90–110% of panel capacity)</div><div class="item-hint">Oversizing panels relative to inverter (up to 133%) is normal and allowed under CEC design guidelines.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-inverter" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Hybrid inverter if battery is planned (now or later)</div><div class="item-hint">Standard string inverters can't charge batteries. If you might add storage, plan for this from the start.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-card open" id="cat-install">
+      <div class="category-header" onclick="toggleCat('cat-install')">
+        <span class="category-icon">🔧</span>
+        <span class="category-title">Installation & Design</span>
+        <span class="category-meta" id="meta-cat-install">0 / 8</span>
+        <svg class="cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="category-body">
+        <div class="checklist-item" data-cat="cat-install" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Site assessment done (in-person or satellite) <span class="item-tag tag-must">Must Have</span></div><div class="item-hint">A quote without assessing your roof orientation, shading, and switchboard is just guessing.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-install" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Shading analysis performed</div><div class="item-hint">Shading on even one panel can reduce whole-string output significantly. Good installers model this.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-install" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">CEC-compliant design (AS/NZS 4777 and wiring rules)</div><div class="item-hint">Ask if the system will be designed to CEC installation guidelines. This is legally required.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-install" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Mounting system brand and spec included</div><div class="item-hint">Cheap racking fails in high winds. Look for reputable brands (IronRidge, Clenergy, Radiant, Schletter).</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-install" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Grid connection application managed by installer <span class="item-tag tag-flag">Check This</span></div><div class="item-hint">Your DNSP application can take 2–8 weeks. Confirm the installer handles this, not you.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-install" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Metering upgrade included (if needed)</div><div class="item-hint">Most homes need a smart meter to measure solar exports and earn feed-in tariffs. Confirm who pays for it.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-install" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Estimated annual generation (kWh) stated</div><div class="item-hint">A reputable quote will include a year-1 generation estimate. Compare this across quotes — if one is wildly higher, ask why.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-install" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Roof penetrations to be sealed and weatherproofed</div><div class="item-hint">Confirm cables and fixings will be properly sealed. Poor sealing = future leak = expensive repair.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-card open" id="cat-warranty">
+      <div class="category-header" onclick="toggleCat('cat-warranty')">
+        <span class="category-icon">🛡️</span>
+        <span class="category-title">Warranties & After-Sales</span>
+        <span class="category-meta" id="meta-cat-warranty">0 / 7</span>
+        <svg class="cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="category-body">
+        <div class="checklist-item" data-cat="cat-warranty" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Installer workmanship warranty: minimum 5 years <span class="item-tag tag-must">Must Have</span></div><div class="item-hint">Required of all CEC-accredited installers. Covers their labour, wiring, mounting, and roof penetrations.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-warranty" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Warranty claim process clearly explained</div><div class="item-hint">Who do you call if a panel fails in year 8? Is it the installer or the manufacturer? Get this in writing.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-warranty" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Labour costs for warranty replacements addressed <span class="item-tag tag-flag">Check This</span></div><div class="item-hint">Most panel warranties cover the part only, not the $300–$800 call-out to replace it. Who covers labour?</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-warranty" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Inverter replacement process explained</div><div class="item-hint">Inverters are the component most likely to need replacing mid-system life. Know the process before it happens.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-warranty" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Post-installation commissioning and handover included</div><div class="item-hint">A good installer will walk you through the monitoring app, show you the system is producing, and provide all documents.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-warranty" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Certificate of Electrical Safety (COES) provided</div><div class="item-hint">Mandatory in most states after installation. You should receive this document — it proves the work is compliant.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-warranty" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">STC assignment paperwork explained</div><div class="item-hint">The STC rebate is typically assigned to the installer in exchange for a discount on your invoice. This should be transparent in the contract.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-card open" id="cat-contract">
+      <div class="category-header" onclick="toggleCat('cat-contract')">
+        <span class="category-icon">📄</span>
+        <span class="category-title">Contract & Pricing</span>
+        <span class="category-meta" id="meta-cat-contract">0 / 8</span>
+        <svg class="cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="category-body">
+        <div class="checklist-item" data-cat="cat-contract" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Full written quote with itemised pricing <span class="item-tag tag-must">Must Have</span></div><div class="item-hint">Panels, inverter, racking, labour, metering and grid connection fees should all be listed separately.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-contract" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">STC rebate amount clearly shown <span class="item-tag tag-must">Must Have</span></div><div class="item-hint">The government rebate should be clearly deducted from the total price, not hidden in a "discounted" headline price.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-contract" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Deposit amount is reasonable (max 10–20%) <span class="item-tag tag-flag">Check This</span></div><div class="item-hint">A deposit over 30–40% from a company you've not dealt with before is a significant risk.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-contract" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Price lock / validity period stated</div><div class="item-hint">How long is this quote valid? Material costs can change. A price lock of 30–60 days is reasonable.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-contract" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Cooling-off period acknowledged (consumer rights)</div><div class="item-hint">Under Australian Consumer Law you may have a cooling-off period. High-pressure "sign now" contracts that deny this are a red flag.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-contract" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Exclusions clearly listed (scaffolding, switchboard upgrades, etc.)</div><div class="item-hint">Common hidden extras include switchboard upgrades ($500–$1,500), scaffolding ($500–$2,000), and metering upgrade fees.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-contract" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">Price is in line with market rates <span class="item-tag tag-flag">Check This</span></div><div class="item-hint">6.6kW: ~$5,500–$7,500 installed after rebate. 10kW: ~$7,500–$11,000. Significantly lower = quality concern. Higher = verify what's included.</div></div>
+        </div>
+        <div class="checklist-item" data-cat="cat-contract" onclick="toggleItem(this)">
+          <div class="check-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="item-content"><div class="item-label">No "too good to be true" claims</div><div class="item-hint">Be sceptical of claimed payback periods under 3 years, efficiency claims over 26%, or savings that seem unrealistically high.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box" style="margin-top:32px">
+      <h3>Want a quote you can trust?</h3>
+      <p>Get matched with CEC-accredited local installers through SunReady — obligation free, no pressure, all the info you need to decide.</p>
+      <a href="/quote" class="btn-white">
+        Get My Free Quotes
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo">
+      <a href="/" class="logo" style="display:inline-flex;margin-bottom:10px;">
+        <div class="logo-sun">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4.5"/>
+            <line x1="12" y1="1.5" x2="12" y2="3.5"/><line x1="12" y1="20.5" x2="12" y2="22.5"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1.5" y1="12" x2="3.5" y2="12"/><line x1="20.5" y1="12" x2="22.5" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </div>
+        <span class="logo-text">Sun<span>Ready</span> Solar</span>
+      </a>
+      <p class="footer-tagline">Australia's free solar education hub. Learn, compare, and save, on your terms.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Free Tools</h4>
+      <ul>
+        <li><a href="/tools/savings-calculator">Savings Calculator</a></li>
+        <li><a href="/tools/quote-checklist">Quote Checklist</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Free Guides</h4>
+      <ul>
+        <li><a href="/guides/solar-101">Solar 101 Guide</a></li>
+        <li><a href="/guides/best-solar-panels">Best Solar Panels</a></li>
+        <li><a href="/guides/rebates">Rebate Guide 2026</a></li>
+        <li><a href="/guides/battery-storage">Battery Guide</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/how-it-works">How It Works</a></li>
+        <li><a href="/installer-network">Installer Network</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-of-use">Terms of Use</a></li>
+        <li><a href="/disclaimer">Disclaimer</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 SunReady Solar &middot; sunreadysolar.com.au &middot; All rights reserved.</span>
+    <span>Australian-owned and operated</span>
+  </div>
+</footer>
+
+<script>
+  // Count all items on load
+  const allItems = document.querySelectorAll('.checklist-item');
+  const total = allItems.length;
+
+  function toggleItem(el) {
+    if (el.classList.contains('checked')) {
+      el.classList.remove('checked');
+    } else {
+      el.classList.add('checked');
+      el.classList.remove('flagged');
+    }
+    updateProgress();
+  }
+
+  function toggleCat(id) {
+    document.getElementById(id).classList.toggle('open');
+  }
+
+  function updateProgress() {
+    const checked = document.querySelectorAll('.checklist-item.checked').length;
+    const pct = total > 0 ? Math.round((checked / total) * 100) : 0;
+
+    document.getElementById('progFill').style.width = pct + '%';
+    document.getElementById('progCount').textContent = checked + ' / ' + total;
+    document.getElementById('score-checked').textContent = checked;
+    document.getElementById('score-unchecked').textContent = total - checked;
+    document.getElementById('score-pct').textContent = pct + '%';
+    document.getElementById('score-label-pct').textContent = pct + '%';
+
+    const fill = document.getElementById('score-bar-fill');
+    fill.style.width = pct + '%';
+    if (pct >= 80) fill.style.background = 'var(--green)';
+    else if (pct >= 50) fill.style.background = 'var(--orange)';
+    else fill.style.background = 'var(--red)';
+
+    // Verdicts
+    document.getElementById('verdict-good').classList.remove('show','good');
+    document.getElementById('verdict-ok').classList.remove('show','ok');
+    document.getElementById('verdict-bad').classList.remove('show','bad');
+    if (checked >= 10) {
+      if (pct >= 80) { document.getElementById('verdict-good').classList.add('show','good'); }
+      else if (pct >= 50) { document.getElementById('verdict-ok').classList.add('show','ok'); }
+      else { document.getElementById('verdict-bad').classList.add('show','bad'); }
+    }
+
+    // Per-category meta counts
+    ['cat-installer','cat-panels','cat-inverter','cat-install','cat-warranty','cat-contract'].forEach(function(catId) {
+      const catItems = document.querySelectorAll('[data-cat="' + catId + '"]');
+      const catChecked = document.querySelectorAll('[data-cat="' + catId + '"].checked').length;
+      const meta = document.getElementById('meta-' + catId);
+      meta.textContent = catChecked + ' / ' + catItems.length;
+      if (catChecked === catItems.length && catItems.length > 0) {
+        meta.classList.add('done');
+      } else {
+        meta.classList.remove('done');
+      }
+    });
+  }
+
+  function resetAll() {
+    document.querySelectorAll('.checklist-item').forEach(function(el) {
+      el.classList.remove('checked', 'flagged');
+    });
+    updateProgress();
+  }
+
+  // Init counts
+  updateProgress();
+</script>
+
+</body>
+</html>
