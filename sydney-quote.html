@@ -651,9 +651,7 @@ footer {
             <div class="err-msg" id="err-postcode">Enter a valid 4-digit postcode</div>
           </div>
 
-          <div id="postcode-error" style="display:none; background:#fff5f5; border-left:4px solid #e53e3e; border-radius:10px; padding:12px 14px; margin-bottom:16px;">
-            <p style="font-size:0.8rem; color:#e53e3e; line-height:1.5; margin:0;">Sorry, we don't currently have an installer covering that postcode. Please try a different postcode or contact us directly.</p>
-          </div>
+
 
           <button class="btn-submit" id="postcodeNextBtn" onclick="lookupPostcode()">
             Find My Local Installer →
@@ -667,7 +665,7 @@ footer {
 
           <div class="matched-notice" id="buyerMatchNotice">
             <span class="mn-icon">🎯</span>
-            <p>Great news! We've matched you with <strong id="buyerNameDisplay">your local installer</strong> — a pre-vetted, CEC-accredited installer in your Sydney area. Enter your details below to receive your free quote.</p>
+            <p>Great news! We've matched you with <strong>Sunquest Energy</strong> — a pre-vetted, CEC-accredited installer in your Sydney area. Enter your details below to receive your free quote.</p>
           </div>
 
           <div class="field-row">
@@ -698,7 +696,7 @@ footer {
           <div class="consent-box">
             <input type="checkbox" id="consent" onchange="validateContact()" />
             <label for="consent">
-              I agree to be matched with a vetted, CEC-accredited solar installer local to my Sydney area by <strong id="consentBuyerName">SunReady Solar</strong>. I understand this is obligation-free and my details will be shared with a solar installer. I have read and accept the <a href="/privacy-policy">Privacy Policy</a> and <a href="/terms-of-use">Terms of Use</a>.
+              I agree to be matched with a vetted, CEC-accredited solar installer local to my Sydney area by <strong>Sunquest Energy</strong>. I understand this is obligation-free and my details will be shared with a solar installer. I have read and accept the <a href="/privacy-policy">Privacy Policy</a> and <a href="/terms-of-use">Terms of Use</a>.
             </label>
           </div>
 
@@ -917,12 +915,10 @@ footer {
 
 <script>
   var WEBHOOK_URL = 'https://hook.eu2.make.com/kr1rltnfw9pvsv8wlpbodyoj36ymea5t';
-  var SUPABASE_FUNCTION_URL = 'https://wmegoygrancfwxagqskh.supabase.co/functions/v1/postcode-lookup';
   var SUPABASE_URL = 'https://xjmtalbaylkmwhdcillq.supabase.co';
   var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhqbXRhbGJheWxrbXdoZGNpbGxxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU1NDIwMjMsImV4cCI6MjA5MTExODAyM30.OVPOHDx8x-bP_QfC9isDGKCgV4zOcXkMeDStIJlHjwg';
   var TOTAL_STEPS = 5;
   var formData = { source: 'sunreadysolar.com.au/sydney-quote', campaign: 'sydney_meta_ads' };
-  var matchedBuyerName = '';
 
   window.updateProgress = function(step) {
     var pct = ((step - 1) / TOTAL_STEPS) * 100;
@@ -974,7 +970,7 @@ footer {
     setTimeout(function() { goToStep(3, 4); }, 280);
   };
 
-  window.lookupPostcode = async function() {
+  window.lookupPostcode = function() {
     var pcInput = document.getElementById('postcode');
     var pc = pcInput.value.trim().replace(/\D/g, '');
     if (!/^\d{4}$/.test(pc)) {
@@ -984,40 +980,9 @@ footer {
     }
     pcInput.classList.remove('error');
     document.getElementById('err-postcode').style.display = 'none';
-    document.getElementById('postcode-error').style.display = 'none';
-
-    var btn = document.getElementById('postcodeNextBtn');
-    btn.disabled = true;
-    btn.textContent = 'Finding your installer…';
-
     formData.postcode = pc;
-
-    try {
-      var resp = await fetch(SUPABASE_FUNCTION_URL + '?postcode=' + encodeURIComponent(pc));
-      var data = await resp.json();
-
-      if (data.buyer_name) {
-        matchedBuyerName = data.buyer_name;
-        formData.matched_buyer = data.buyer_name;
-        if (data.buyer_id) formData.matched_buyer_id = data.buyer_id;
-
-        document.getElementById('buyerNameDisplay').textContent = data.buyer_name;
-        document.getElementById('consentBuyerName').textContent = data.buyer_name;
-
-        btn.disabled = false;
-        btn.textContent = 'Find My Local Installer →';
-        goToStep(4, 5);
-      } else {
-        document.getElementById('postcode-error').style.display = 'block';
-        btn.disabled = false;
-        btn.textContent = 'Find My Local Installer →';
-      }
-    } catch(e) {
-      console.error('Postcode lookup error:', e);
-      document.getElementById('postcode-error').style.display = 'block';
-      btn.disabled = false;
-      btn.textContent = 'Find My Local Installer →';
-    }
+    formData.matched_buyer = 'Sunquest Energy';
+    goToStep(4, 5);
   };
 
   function validateContact() {
@@ -1094,8 +1059,8 @@ footer {
         is_homeowner: formData.is_homeowner,
         avg_quarterly_bill: formData.avg_quarterly_bill,
         purchase_timeline: formData.purchase_timeline,
-        matched_buyer: formData.matched_buyer || null,
-        matched_buyer_id: formData.matched_buyer_id || null,
+        matched_buyer: 'Sunquest Energy',
+        matched_buyer_id: null,
         source: formData.source,
         campaign: formData.campaign || null,
         submitted_at: formData.submitted_at
