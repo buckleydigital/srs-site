@@ -1179,6 +1179,7 @@
         matched_buyer: formData.matched_buyer || null,
         matched_buyer_id: formData.matched_buyer_id || null,
         source: formData.source,
+        campaign: formData.campaign || null,
         submitted_at: formData.submitted_at
       })
     }).catch(function(e) { console.warn('Supabase error:', e); });

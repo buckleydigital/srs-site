@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS public.leads (
   matched_buyer_id   text,
   source        text,
   campaign      text,
-  submitted_at  timestamptz,
+  submitted_at  timestamptz DEFAULT now(),
   created_at    timestamptz DEFAULT now()
 );
 
